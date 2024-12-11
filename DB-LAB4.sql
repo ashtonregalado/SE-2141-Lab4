@@ -54,7 +54,7 @@ JOIN book_loans bl ON b.ISBN = bl.ISBN
 WHERE bl.user_id = 1;
 
 
-
+EXPLAIN ANALYZE
 SELECT u.full_name, b.Title, bl.loan_date, bl.return_date
 FROM book_loans bl
 JOIN users u ON bl.user_id = u.user_id
